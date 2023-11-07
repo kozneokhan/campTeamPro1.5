@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Movie Detail</title>
+    <link rel="stylesheet" href="movieDetail.css" />
+    <link rel="stylesheet" href="reviewStyle.css" />
+    <link rel="stylesheet" href="likeDislikes.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="innerHeader">
+        <div class="title">BSANG MOVIE</div>
+      </div>
+    </header>
+    <main>
+      <div class="movieCard">
+        <div class="imgBox">
+          <img class="movieImage" alt="" />
+        </div>
+        <div class="movieInfo">
+          <div class="movieTitle"></div>
+          <div class="movieGenres"></div>
+          <div class="movieOriginalLanguage"></div>
+          <div class="movieReleaseDate"></div>
+          <div class="movieVoteCount"></div>
+          <div class="movieRuntime"></div>
+          <div class="movieRating"></div>
+        </div>
+      </div>
+      <div class="overViewBox">
+        <p class="movieOverview"></p>
+      </div>
+
+      <div class="reviewCard">
+        <div class="reviewTitle">Review</div>
+        <form name="f" class="formBox">
+          <table class="reviewTable" id="t1">
+            <tr>
+              <th>작성자</th>
+              <td><input type="text" name="writer" id="writer" /></td>
+            </tr>
+            <tr>
+              <th>비밀번호</th>
+              <td><input type="password" name="pwd" id="pwd" /></td>
+            </tr>
+            <tr>
+              <th>별점</th>
+              <td>
+                <select class="form-select" id="star">
+                  <option value="별점선택">별점선택</option>
+                  <option value="⭐">⭐</option>
+                  <option value="⭐⭐">⭐⭐</option>
+                  <option value="⭐⭐⭐">⭐⭐⭐</option>
+                  <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+                  <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td><input class="BtnStyle" type="button" value="작성" id="submitButton" /></td>
+            </tr>
+          </table>
+          <textarea class="contentBox" id="content" placeholder="작성해주세요"></textarea>
+          <div id="error" style="color: red"></div>
+          <!-- Error message div -->
+        </form>
+
+        <div class="card">
+          <div class="commentTitle">Comment</div>
+          <div id="list">
+            <!-- 새로 생길 요소의 자리를 미리 만들어놓음 -->
+          </div>
+        </div>
+
+        <!-- 수정 폼 -->
+        <div id="editf">
+          <table class="reviewTable">
+            <tr>
+              <th>작성자</th>
+              <td><input type="text" name="editwriter" id="editwriter" /></td>
+            </tr>
+            <tr>
+              <th>비밀번호</th>
+              <td><input type="password" name="editpwd" id="editpwd" /></td>
+            </tr>
+            <tr>
+              <th>별점</th>
+              <td>
+                <select class="form-select" id="editstar">
+                  <option value="별점선택">별점선택</option>
+                  <option value="⭐">⭐</option>
+                  <option value="⭐⭐">⭐⭐</option>
+                  <option value="⭐⭐⭐">⭐⭐⭐</option>
+                  <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+                  <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+                </select>
+              </td>
+              <div>
+                <!-- <button class="likeBtn">
+                  <svg aria-label="좋아요" class="_8-yf5 white" display="none" ....></svg>
+                  <svg aria-label="좋아요 취소" class="_8-yf5 red" display="none" ...></svg>
+                </button> -->
+              </div>
+            </tr>
+
+            <tr>
+              <td>
+                <input class="BtnStyle" type="button" value="수정완료" id="editbtn" onclick="edit()" />
+                <input class="BtnStyle" type="button" value="취소" onclick="cancel()" />
+              </td>
+            </tr>
+          </table>
+          <textarea class="contentBox" name="editcontent" id="editcontent"></textarea>
+        </div>
+      </div>
+    </main>
+
+    <script src="movieDetail.js"></script>
+    <script src="likeDislikes.js"></script>
+    <script src="timeStamp.js"></script>
+    <script src="editAndDelete.js"></script>
+    <script src="writeReview.js"></script>
+    <script src="localStorage.js"></script>
+  </body>
+</html>

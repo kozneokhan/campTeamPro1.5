@@ -1,0 +1,24 @@
+/* 좋아요와 싫어요 버튼 스타일 */
+/* .likeBtn,
+.dislikeBtn {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px; 
+  background-color: #007bff;
+  color: #fff; 
+  cursor: pointer;
+  margin-right: 10px; 
+} */
+
+/* 좋아요 버튼 스타일 (예시) */
+.likeBtn.clicked {
+  background-color: green; /* Change to your desired color */
+}
+
+/* 싫어요 버튼 스타일 (예시) */
+.dislikeBtn.clicked {
+  background-color: red; /* Change to your desired color */
+}

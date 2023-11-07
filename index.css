@@ -1,0 +1,187 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+/* header */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  z-index: 1;
+}
+
+.innerHeader {
+  width: 1280px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.searchBox {
+  height: 40px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.searchBox .result {
+  width: 200px;
+  height: 30px;
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  padding: 5px 10px;
+  outline: none;
+}
+
+.searchBox #searchIcon {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* main */
+
+main {
+  background-color: var;
+  min-height: 100vh;
+  margin-top: 100px;
+  padding: 28px 0;
+}
+
+.contentBox {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.contentBox .sortBox {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+  justify-content: flex-end;
+}
+
+.contentBox .sortBox > div {
+  border: 1px solid white;
+  border-radius: 10px;
+  color: var(--text-color); /* CSS 변수를 사용하여 텍스트 색상 지정 */
+  padding: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.selectSort {
+  color: black !important;
+  background-color: white !important;
+}
+
+.contentBox .movies {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.contentBox .movies .movie {
+  width: 299px;
+  max-height: 500px;
+  box-shadow: 1px 1px 8px 3px gray;
+  box-sizing: border-box;
+  cursor: pointer;
+  /* overflow: hidden; */
+}
+
+.contentBox .movies .movie .movieTitle {
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contentBox .movies .movie .movieInner {
+  position: relative;
+  overflow: hidden;
+  height: 429px;
+}
+
+.contentBox .movies .movie .movieInner .movieImg {
+  width: 100%;
+  height: auto;
+}
+
+.contentBox .movies .movie .movieInner .movieImg img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contentBox .movies .movie .movieInner .movieContent {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+.contentBox .movies .movie:hover .movieInner .movieContent {
+  top: 0;
+}
+
+.contentBox .movies .movie .movieInner .movieContent .rating {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.contentBox .movies .movie .movieInner .movieContent .summary {
+  font-size: 16px;
+}
+
+/* footer */
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  color: black;
+}
+
+.footer .footerInner {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
